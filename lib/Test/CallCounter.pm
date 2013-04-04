@@ -88,6 +88,8 @@ Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
 L<Test::Mock::Guard>
 
+If you want to do more complex operation while monkey patching, see also L<Test::Resub>.
+
 =head1 LICENSE
 
 Copyright (C) Tokuhiro Matsuno
