@@ -12,5 +12,9 @@ File::Spec->tmpdir;
 
 is($g->count, 1);
 
+File::Spec->tmpdir;
+
+is($g->count, 2);
+
 done_testing;
 
