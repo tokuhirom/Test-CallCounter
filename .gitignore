@@ -9,3 +9,9 @@ Build
 _build/
 xshelper.h
 tags
+/Test-CallCount-*
+/.build
+/_build_params
+/Build
+!Build/
+!META.json
