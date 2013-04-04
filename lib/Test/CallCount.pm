@@ -43,7 +43,7 @@ __END__
 
 =head1 NAME
 
-Test::CallCount -
+Test::CallCount - Count the number of method calling
 
 =head1 SYNOPSIS
 
@@ -58,13 +58,45 @@ Test::CallCount -
 
 =head1 DESCRIPTION
 
-Test::CallCount is
+Test::CallCount counts the number of method calling.
+
+=head1 FUNCTIONS
+
+=over 4
+
+=item add_counter($class_name, $method_name)
+
+    add_counter('LWP::UserAgent' => 'get');
+
+Make a hook.
+
+=item get_counter($class_name, $method_name)
+
+    get_count('LWP::UserAgent', 'get')
+
+Get a calling count of C<< $method_name >>.
+
+=item reset_counter($class_name, $method_name)
+
+Reset counter for C<< $class_name#$method_name >>.
+
+=item reset_counter($class_name)
+
+Reset counter for C<< $class_name >>.
+
+=item reset_counter()
+
+Reset counter for all classes.
+
+=back
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
+Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
 =head1 SEE ALSO
+
+L<Test::Mock::Guard>
 
 =head1 LICENSE
 
