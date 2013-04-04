@@ -54,13 +54,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/tokuhirom/Test-CallCount/issues"
+         "web" : "https://github.com/tokuhirom/Test-CallCounter/issues"
       },
-      "homepage" : "https://github.com/tokuhirom/Test-CallCount",
+      "homepage" : "https://github.com/tokuhirom/Test-CallCounter",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/tokuhirom/Test-CallCount.git",
-         "web" : "https://github.com/tokuhirom/Test-CallCount"
+         "url" : "git://github.com/tokuhirom/Test-CallCounter.git",
+         "web" : "https://github.com/tokuhirom/Test-CallCounter"
       }
    },
    "version" : "0.01"
