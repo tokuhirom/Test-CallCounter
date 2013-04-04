@@ -24,12 +24,6 @@
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "6.59",
-            "Test::More" : "0.96"
-         }
-      },
       "configure" : {
          "requires" : {
             "CPAN::Meta" : "0",
@@ -48,10 +42,15 @@
       },
       "runtime" : {
          "requires" : {
-            "Class::Method::Modifier" : "0",
+            "Class::Method::Modifiers" : "0",
             "Exporter" : "0",
             "parent" : "0",
             "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.96"
          }
       }
    },

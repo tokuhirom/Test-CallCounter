@@ -1,9 +1,8 @@
-requires 'Class::Method::Modifier';
 requires 'Exporter';
 requires 'parent';
 requires 'perl', '5.008001';
+requires 'Class::Method::Modifiers';
 
-on build => sub {
-    requires 'ExtUtils::MakeMaker', '6.59';
+on test => sub {
     requires 'Test::More', '0.96';
 };
