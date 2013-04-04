@@ -4,6 +4,7 @@ use warnings;
 use 5.008001;
 our $VERSION = '0.02';
 
+use Scalar::Util 1.24 qw(set_prototype);
 use Class::Method::Modifiers qw(install_modifier);
 
 our $COUNTER;
@@ -17,11 +18,17 @@ sub new {
         count  => 0,
     }, $class;
 
+    my $prototype = prototype($klass->can($method));
+
     install_modifier(
         $klass, 'before', $method, sub {
             $self->{count}++
         }
     );
+
+    if (defined $prototype) {
+        &set_prototype($klass->can($method), $prototype);
+    }
 
     return $self;
 }
