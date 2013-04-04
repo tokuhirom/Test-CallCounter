@@ -1,47 +1,37 @@
 # NAME
 
-Test::CallCount - Count the number of method calling
+Test::CallCounter - Count the number of method calling
 
 # SYNOPSIS
 
-    use Test::CallCount;
+    use Test::CallCounter;
 
-    add_counter('LWP::UserAgent' => 'get');
+    my $counter = Test::CallCounter->new(
+        'LWP::UserAgent' => 'get'
+    );
 
     my $ua = LWP::UserAgent->new();
     $ua->get('http://d.hatena.ne.jp/');
 
-    is(get_count('LWP::UserAgent', 'get'), 1);
+    is($counter->count(), 1);
 
 # DESCRIPTION
 
-Test::CallCount counts the number of method calling.
+Test::CallCounter counts the number of method calling.
 
-# FUNCTIONS
+# METHODS
 
-- add\_counter($class\_name, $method\_name)
+- my $counter = Test::CallCounter->new($class\_name, $method\_name)
 
-        add_counter('LWP::UserAgent' => 'get');
+    Make a instance of Test::CallCounter and hook `$method_name` method in `$class_name` to count calling method.
 
-    Make a hook.
-
-- get\_counter($class\_name, $method\_name)
-
-        get_count('LWP::UserAgent', 'get')
+- $counter->count();
 
     Get a calling count of `$method_name`.
 
-- reset\_counter($class\_name, $method\_name)
+- $counter->reset()
 
-    Reset counter for `$class_name#$method_name`.
-
-- reset\_counter($class\_name)
-
-    Reset counter for `$class_name`.
-
-- reset\_counter()
-
-    Reset counter for all classes.
+    Reset counter.
 
 # AUTHOR
 

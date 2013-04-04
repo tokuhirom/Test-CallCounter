@@ -2,15 +2,15 @@ use strict;
 use warnings;
 use utf8;
 use Test::More;
-use Test::CallCount;
+use Test::CallCounter;
 
 use File::Spec;
 
-add_counter('File::Spec' => 'tmpdir');
+my $g = Test::CallCounter->new('File::Spec', 'tmpdir');
 
 File::Spec->tmpdir;
 
-is(get_count('File::Spec', 'tmpdir'), 1);
+is($g->count, 1);
 
 done_testing;
 

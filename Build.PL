@@ -21,8 +21,8 @@ my $builder = Module::Build->new(
     },
 
     no_index    => { 'directory' => [ 'inc' ] },
-    name        => 'Test-CallCount',
-    module_name => 'Test::CallCount',
+    name        => 'Test-CallCounter',
+    module_name => 'Test::CallCounter',
 
     script_files => [glob('script/*'), glob('bin/*')],
 

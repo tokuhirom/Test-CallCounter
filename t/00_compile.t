@@ -1,4 +1,9 @@
 use strict;
-use Test::More tests => 1;
+use Test::More;
 
-BEGIN { use_ok 'Test::CallCount' }
+use_ok $_ for qw(
+    Test::CallCounter
+);
+
+done_testing;
+
