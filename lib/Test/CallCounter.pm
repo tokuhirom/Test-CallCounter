@@ -2,7 +2,7 @@ package Test::CallCounter;
 use strict;
 use warnings;
 use 5.008001;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Class::Method::Modifiers qw(install_modifier);
 

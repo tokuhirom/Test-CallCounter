@@ -23,15 +23,15 @@ Test::CallCounter counts the number of method calling.
 
 - my $counter = Test::CallCounter->new($class\_name, $method\_name)
 
-    Make a instance of Test::CallCounter and hook `$method_name` method in `$class_name` to count calling method.
+Make a instance of Test::CallCounter and hook `$method_name` method in `$class_name` to count calling method.
 
 - $counter->count();
 
-    Get a calling count of `$method_name`.
+Get a calling count of `$method_name`.
 
 - $counter->reset()
 
-    Reset counter.
+Reset counter.
 
 # AUTHOR
 
