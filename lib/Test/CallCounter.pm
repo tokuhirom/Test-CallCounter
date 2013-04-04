@@ -1,7 +1,6 @@
 package Test::CallCounter;
 use strict;
 use warnings;
-use parent qw(Exporter);
 use 5.008001;
 our $VERSION = '0.01';
 
