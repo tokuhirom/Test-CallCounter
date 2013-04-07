@@ -2,7 +2,7 @@ package Test::CallCounter;
 use strict;
 use warnings;
 use 5.008001;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Scalar::Util 1.24 qw(set_prototype);
 use Class::Method::Modifiers qw(install_modifier);
