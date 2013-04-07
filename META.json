@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Method::Modifiers" : "0",
             "Scalar::Util" : "1.24",
             "perl" : "5.008001"
          }
